@@ -1,6 +1,22 @@
 import styled from "styled-components/native";
 import React, { FC } from "react";
 
+const CalcButton: FC<{
+  title: string | number;
+  onPress(): void;
+  flex?: boolean;
+  isControl?: boolean;
+  isOperator?: boolean;
+}> = ({ title, isControl, isOperator, flex, onPress }) => {
+  const color = isControl ? "lightgrey" : isOperator ? "orange" : "dimgrey";
+  return (
+    <StyledButton onPress={onPress} color={color} flex={flex}>
+      <StyledButtonText>{title}</StyledButtonText>
+    </StyledButton>
+  );
+};
+
+export default CalcButton;
 const StyledButton = styled.TouchableOpacity<{ color: string; flex?: boolean }>`
   background-color: ${(props) => props.color};
   border-radius: 500px;
@@ -16,24 +32,9 @@ const StyledButton = styled.TouchableOpacity<{ color: string; flex?: boolean }>`
 `;
 
 const StyledButtonText = styled.Text`
-  color: white;
-  font-weight: 600;
-  font-size: 32px;
+  color: black;
+  font-weight: 900;
+  font-size: 33px;
 `;
 
-const CalculatorButton: FC<{
-  title: string | number;
-  onPress(): void;
-  flex?: boolean;
-  isControl?: boolean;
-  isOperator?: boolean;
-}> = ({ title, isControl, isOperator, flex, onPress }) => {
-  const color = isControl ? "lightgrey" : isOperator ? "orange" : "dimgrey";
-  return (
-    <StyledButton onPress={onPress} color={color} flex={flex}>
-      <StyledButtonText>{title}</StyledButtonText>
-    </StyledButton>
-  );
-};
 
-export default CalculatorButton;

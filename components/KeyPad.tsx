@@ -1,19 +1,20 @@
 import React, { FC } from "react";
+import CalculatorButton from "./CalcButtons";
 import styled from "styled-components/native";
-import CalculatorButton from "./CalculatorButton";
 
 export enum Operator {
-  ADD = "+",
   SUBTRACT = "-",
-  DIVIDE = "/",
-  MULTIPLY = "*",
   POWER = "^",
   EQUAL = "=",
+  DIVIDE = "/",
+  MULTIPLY = "*",
+  ADD = "+",
 }
+
 export enum Control {
+  PERCENTAGE = "%",
   CLEAR = "C",
   ABS = "±",
-  PERCENTAGE = "%",
   DOT = ".",
 }
 
@@ -119,7 +120,6 @@ const KeyPad: FC<KeyPadProps> = ({
         <CalculatorButton
           title={"0"}
           onPress={() => handleNumberClick(0)}
-          flex
         />
         <CalculatorButton
           title={Control.DOT}

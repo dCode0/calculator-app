@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Calculator from "./screens/Calculator";
 import Converter from "./screens/Converter";
+import WelcomePage from "./screens/WelcomPage";
 import CalculatorHistoryView from "./screens/CalculatorHistory";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -15,7 +16,7 @@ const MyStack = () => {
     <Provider store={store}>
       <NavigationContainer>
         <Tab.Navigator
-          initialRouteName={"Calculator"}
+          initialRouteName={"Home"}
           tabBarOptions={{
             activeTintColor: "orange",
             inactiveTintColor: "white",
@@ -26,6 +27,7 @@ const MyStack = () => {
             },
           }}
         >
+           <Tab.Screen name="Home" component={WelcomePage} />
           <Tab.Screen name="Calculator" component={Calculator} />
           <Tab.Screen name="Converter" component={Converter} />
           <Tab.Screen name="History" component={CalculatorHistoryView} />
