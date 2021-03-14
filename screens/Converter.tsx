@@ -4,29 +4,31 @@ import { StyledView } from "../common/styles";
 import { Keyboard, Pressable } from "react-native";
 
 const StyledInputContainer = styled.View`
+  align-items: center;
+  justify-content: flex-end; 
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
+  
+`;
+
+const StyledText = styled.Text`
+  font-size: 15px;
+  margin-left: 15px;
+  color: orange;
+  flex: 0 0 20%;
 `;
 
 const StyledTextInput = styled.TextInput`
-  text-align: right;
-  color: black;
+  text-align: center;
+  color: orange;
   font-size: 30px;
   padding: 0 15px;
   border: 1px solid black;
   border-radius: 6px;
-  background-color: orange;
+  background-color: black;
   flex: 1;
   width: 80%;
   margin: 0 0 10px 10px;
-`;
-const StyledText = styled.Text`
-  font-size: 15px;
-  margin-left: 15px;
-  color: white;
-  flex: 0 0 20%;
 `;
 
 const StyledResetContainer = styled.View`
@@ -39,23 +41,24 @@ const StyledResetContainer = styled.View`
 `;
 
 const StyledResetButton = styled.TouchableOpacity`
-  font-size: 35px;
-  color: white;
-  background-color: #f5222d;
-  padding: 5px;
-  border-radius: 5px;
+  border-radius: 20px;
   width: 50%;
+  font-size: 35px;
+  background-color: #d3d3d3;
+  padding: 5px;
+ 
 `;
 
 const StyledResetButtonText = styled.Text`
-  font-size: 16px;
-  color: white;
   text-align: center;
-  font-weight: bold;
+  font-weight: bold;  
+  font-size: 16px;
+  color: black;
+  
 `;
 
 const Converter = () => {
-  const initialValue = ["0", "0"];
+  const initialValue = ["1", "1.609"];
   const [[miles, kilometers], setValues] = useState(initialValue);
 
   const hasDecimal = (value: string) => {
@@ -107,7 +110,7 @@ const Converter = () => {
             onChangeText={onKiloMetersChange}
             keyboardType={"numeric"}
           />
-          <StyledText>km</StyledText>
+          <StyledText>Kilometers</StyledText>
         </StyledInputContainer>
 
         <StyledResetContainer>

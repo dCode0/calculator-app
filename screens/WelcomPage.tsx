@@ -26,30 +26,45 @@ const StyledButton = styled.TouchableOpacity`
   color: white;
   font-size: 16px;
   padding: 10px;
+  width: 100px;
+  border-radius: 50px;
+  align-items: center;
   margin: 10px 0;
   background-color: orange;
 `;
 const MAX_DIGIT = 10;
 
+const styles = StyleSheet.create({
+  baseText:{
+    fontSize: 15,
+    fontWeight: "bold",
+  }, 
+  titleText: {
+    fontSize: 40,
+    fontWeight: "bold",
+    color: "white"
+  }
+});
+
 const HomePage: FC = (props:any) => {
   
   return (
     <StyledView>
-      <Text>
+      <Text style={styles.titleText}>
         Welcome
       </Text>
       <StyledButton onPress={ () => props.navigation.navigate("Calculator") } >
-        <Text>
+        <Text style={styles.baseText}>
           Calculator
         </Text>
       </StyledButton>
       <StyledButton onPress={ () => props.navigation.navigate("Converter") }>
-        <Text>
+        <Text style={styles.baseText}>
           Converter
         </Text>
       </StyledButton>
       <StyledButton onPress={ () => props.navigation.navigate("History") }>
-        <Text>
+        <Text style={styles.baseText}>
           History
         </Text>
       </StyledButton>

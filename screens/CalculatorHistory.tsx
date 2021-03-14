@@ -1,9 +1,10 @@
 import React from "react";
+import { selectCalculatorHistory } from "../store";
+import { FlatList, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 import { StyledView } from "../common/styles";
 import { useSelector } from "react-redux";
-import { selectCalculatorHistory } from "../store";
-import { FlatList, StyleSheet } from "react-native";
+
 
 const StyledTitle = styled.Text`
   font-size: 32px;
@@ -15,7 +16,8 @@ const StyledText = styled.Text`
   font-size: 15px;
   font-weight: 500;
   margin-left: 15px;
-  color: white;
+  font-weight: bold;
+  color: orange;
 `;
 
 const StyledContainer = styled.View`
@@ -48,8 +50,8 @@ const CalculatorHistoryView = () => {
           data={calculatorHistory}
           renderItem={({ item, index }) => (
             <StyledHistoryItem key={index}>
-              <StyledText>Equation: {item.equation}</StyledText>
-              <StyledText>Date: {item.timestamp}</StyledText>
+              <StyledText>Calculation: {item.equation}</StyledText>
+              <StyledText>Time Stamp: {item.timestamp}</StyledText>
             </StyledHistoryItem>
           )}
         />
