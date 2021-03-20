@@ -8,7 +8,7 @@ const CalcButton: FC<{
   isControl?: boolean;
   isOperator?: boolean;
 }> = ({ title, isControl, isOperator, flex, onPress }) => {
-  const color = isControl ? "lightgrey" : isOperator ? "orange" : "dimgrey";
+  const color = isControl ? "orange" : isOperator ? "orange" : "lightgrey";
   return (
     <StyledButton onPress={onPress} color={color} flex={flex}>
       <StyledButtonText>{title}</StyledButtonText>
@@ -19,10 +19,10 @@ const CalcButton: FC<{
 export default CalcButton;
 const StyledButton = styled.TouchableOpacity<{ color: string; flex?: boolean }>`
   background-color: ${(props) => props.color};
-  border-radius: 500px;
-  width: 75px;
-  height: 75px;
-  padding: 10px;
+  border-radius: 300px;
+  width: 80px;
+  height: 60px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   margin: 5px;
