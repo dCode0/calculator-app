@@ -18,3 +18,7 @@ npm start
 
 
 <img width="1678" alt="Screenshot 2021-03-20 at 18 36 43" src="https://user-images.githubusercontent.com/42236685/111877357-af655a00-89ab-11eb-9bbe-e4debd46893c.png">
+
+<img width="1680" alt="Screenshot 2021-03-20 at 18 44 52" src="https://user-images.githubusercontent.com/42236685/111877588-ab860780-89ac-11eb-8eca-44a69a8068e9.png">
+
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-03-20 at 18 44 58](https://user-images.githubusercontent.com/42236685/111877594-b04abb80-89ac-11eb-8e24-2c7a92a1af22.png)
