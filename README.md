@@ -12,3 +12,6 @@ A multi-functional application with React Native and Typescript
 Run the following commands to get started.
 
 npm start
+
+
+<img width="490" alt="Screenshot 2021-03-20 at 18 37 26" src="https://user-images.githubusercontent.com/42236685/111877340-98266c80-89ab-11eb-9082-6987f8f98735.png">
