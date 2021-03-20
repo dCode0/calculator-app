@@ -11,6 +11,4 @@ A multi-functional application with React Native and Typescript
 ## Commands
 Run the following commands to get started.
 
-yarn
-
-yarn start
+npm start

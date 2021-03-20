@@ -11,7 +11,7 @@ import store from "./store";
 
 const Tab = createBottomTabNavigator();
 
-const MyStack = () => {
+const CalcApp = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
@@ -37,4 +37,4 @@ const MyStack = () => {
   );
 };
 
-export default MyStack;
+export default CalcApp;

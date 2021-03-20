@@ -1,8 +1,9 @@
-import React, { FC, useState } from "react";
-import KeyPad, { Control, Operator } from "../components/KeyPad";
+import { StyledView } from "../common/styles";
 import ReactDOM from "react-dom";
 import styled from "styled-components/native";
-import { StyledView } from "../common/styles";
+import React, { FC, useState } from "react";
+import KeyPad, { Control, Operator } from "../components/KeyPad";
+
 import { saveHistory, useAppDispatch } from "../store";
 import dayjs from "dayjs";
 
@@ -22,7 +23,7 @@ const StyledNumberText = styled.Text`
 
 const MAX_DIGIT = 10;
 
-const Calculator: FC = () => {
+const Calc: FC = () => {
   const dispatch = useAppDispatch();
 
   const [firstNumber, setFirstNumber] = useState(0);
@@ -130,4 +131,4 @@ const Calculator: FC = () => {
   );
 };
 
-export default Calculator;
+export default Calc;
