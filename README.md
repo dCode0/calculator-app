@@ -15,3 +15,6 @@ npm start
 
 
 <img width="490" alt="Screenshot 2021-03-20 at 18 37 26" src="https://user-images.githubusercontent.com/42236685/111877340-98266c80-89ab-11eb-9082-6987f8f98735.png">
+
+
+<img width="1678" alt="Screenshot 2021-03-20 at 18 36 43" src="https://user-images.githubusercontent.com/42236685/111877357-af655a00-89ab-11eb-9bbe-e4debd46893c.png">
