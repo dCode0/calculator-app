@@ -1,3 +1,5 @@
+
+
 import "react-native-gesture-handler";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
@@ -7,7 +9,9 @@ import Converter from "./screens/Converter";
 import WelcomePage from "./screens/WelcomPage";
 import CalculatorHistoryView from "./screens/CalculatorHistory";
 import { Provider } from "react-redux";
+import "./firebase";
 import store from "./store";
+import CalculatorHistoryCloudView from "./screens/CalculatorHistoryCloud";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,15 +26,16 @@ const CalcApp = () => {
             inactiveTintColor: "white",
             style: { backgroundColor: "#121212", borderTopColor: "#121212" },
             labelStyle: {
-              fontSize: 20,
+              fontSize: 10,
               fontWeight: "bold",
             },
           }}
         >
-           <Tab.Screen name="Home" component={WelcomePage} />
+          <Tab.Screen name="Home" component={WelcomePage} />
           <Tab.Screen name="Calculator" component={Calculator} />
           <Tab.Screen name="Converter" component={Converter} />
           <Tab.Screen name="History" component={CalculatorHistoryView} />
+          <Tab.Screen name="Cloud History" component={CalculatorHistoryCloudView} />
         </Tab.Navigator>
       </NavigationContainer>
     </Provider>

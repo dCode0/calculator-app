@@ -6,6 +6,7 @@ import KeyPad, { Control, Operator } from "../components/KeyPad";
 
 import { saveHistory, useAppDispatch } from "../store";
 import dayjs from "dayjs";
+import firestore from "../storage/firestore";
 
 const StyledNumberView = styled.View`
   justify-content: flex-end;
@@ -93,12 +94,15 @@ const Calc: FC = () => {
       equation = `${firstNumber} ${operator} ${number} = ${result}`;
     }
 
+    const record = {
+      equation,
+      timestamp: dayjs().format("MMMM DD, YYYY HH:mm"),
+    }
+
     dispatch(
-      saveHistory({
-        equation,
-        timestamp: dayjs().format("MMMM DD, YYYY HH:mm"),
-      })
+      saveHistory(record)
     );
+    firestore.setItem(record);
     setNumber(String(result));
   };
 
